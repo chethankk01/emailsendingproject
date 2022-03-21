@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<h1>send an email</h1>
+<form action="{%url 'email'%}" method="post">
+    {% csrf_token %}
+    <p>To</p>
+    <input type="email" name="toemail">
+    <p>Body</p>
+    <textarea name="content" cols="3" rows="10" style="width: 336px; height: 76px;"></textarea><br>
+    <input type="submit" value="send">
+    <input type="reset" value="clear">
+</form>
+</body>
+</html>
